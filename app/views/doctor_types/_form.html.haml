@@ -1,0 +1,10 @@
+= simple_form_for @doctor_type do |f|
+  -if @doctor_type.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@doctor_type.errors.count, "error")} prohibited this doctor_type from being saved:"
+      %ul
+        - @doctor_type.errors.full_messages.each do |msg|
+          %li= msg
+
+  = f.input :name,:label => "Врач"
+  = f.submit 'Сохранить'

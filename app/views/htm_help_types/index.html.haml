@@ -1,0 +1,19 @@
+%h2 Типы ВТМП
+%br
+
+
+%table#newspaper-a
+  %tr
+    %th Тип
+    %th
+    %th
+
+  - @htm_help_types.each do |htm_help_type|
+    %tr
+      %td= htm_help_type.name
+      %td= link_to image_tag("",:class => "ui-icon ui-icon-pencil"),edit_htm_help_type_path(htm_help_type)
+      %td= link_to image_tag("",:class => "ui-icon ui-icon-minus"), htm_help_type, :confirm => 'Are you sure?', :method => :delete if htm_help_type.can_be_deleted
+
+%br
+
+= link_to 'Новый тип ВТМП', new_htm_help_type_path

@@ -1,0 +1,2 @@
+module HtmHelpTypesHelper
+end

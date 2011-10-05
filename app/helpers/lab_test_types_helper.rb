@@ -1,0 +1,2 @@
+module LabTestTypesHelper
+end

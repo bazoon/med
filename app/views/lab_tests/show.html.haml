@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Test date:
+  = @lab_test.test_date
+%p
+  %b Lab test type:
+  = @lab_test.lab_test_type_id
+%p
+  %b Client:
+  = @lab_test.client_id
+%p
+  %b Result:
+  = @lab_test.result
+
+= link_to 'Edit', edit_client_lab_test_path(@lab_test)
+\|
+= link_to 'Back', client_lab_tests_path

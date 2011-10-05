@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @med_diagnostic_test_type.name
+
+= link_to 'Edit', edit_med_diagnostic_test_type_path(@med_diagnostic_test_type)
+\|
+= link_to 'Back', med_diagnostic_test_types_path

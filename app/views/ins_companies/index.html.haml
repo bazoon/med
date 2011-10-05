@@ -1,0 +1,18 @@
+%h2 Страховые компании
+%br
+
+
+%table#newspaper-a
+  %tr
+    %th Наименование
+    %th
+    %th
+
+  - @ins_companies.each do |ins_company|
+    %tr
+      %td= ins_company.name
+      %td= link_to image_tag("",:class => "ui-icon ui-icon-pencil"), edit_ins_company_path(ins_company)
+      %td= link_to image_tag("",:class => "ui-icon ui-icon-minus"),ins_company, :confirm => 'Are you sure?', :method => :delete if ins_company.can_be_deleted
+%br
+
+= link_to 'Новая страховая компания', new_ins_company_path

@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+<!-- This template was created by Mantis-a [http://www.mantisa.cz/]. For more templates visit Free website templates [http://www.mantisatemplates.com/]. -->
+
+<meta name="Description" content="..." />
+<meta name="Keywords" content="..." />
+<meta name="robots" content="all,follow" />
+<meta name="author" content="..." />
+<meta name="copyright" content="Mantis-a [http://www.mantisa.cz/]" />
+
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<!-- CSS -->
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen, projection, tv" />
+<!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="css/style-ie.css" media="screen, projection, tv" /><![endif]-->
+<link rel="stylesheet" href="css/style-print.css" type="text/css" media="print" />
+
+
+<title>Company name | Homepage</title>
+
+
+
+<%= stylesheet_link_tag    "application"%>
+<%= javascript_include_tag "application"%>
+<%= csrf_meta_tags %>
+
+</head>
+
+<body>
+<div id="top">&nbsp;</div>
+<div id="wrapper">
+
+	<!-- Header -->
+	<div id="header"> 
+		<h1><a href="/" title="Go to homepage">Госпиталь для ветеранов войн</a></h1>
+                <p class="title">ГЛПУ ТО</p>
+
+		<div id="header-in">
+                  <p>&hellip;the best solution</p>
+
+
+
+		</div>
+
+		<a href="#skip-menu" class="hidden">Skip menu</a>
+
+		<!-- Menu -->
+		<ul id="menu">
+			<li><a href="/" class="active">HOME</a></li>
+			<li><a href="#">ABOUT US</a></li>
+			<li><a href="#">SERVICES</a></li>
+			<li><a href="#">TESTIMONIALS</a></li>
+			<li><a href="#">CONTACT</a></li>
+		</ul> <!-- Menu end -->
+	</div> <!-- Header end -->
+
+	<div class="bar">&nbsp;</div>
+
+<hr class="noscreen" />
+
+<div id="skip-menu"></div>
+
+	<div class="content">
+
+		<!-- Left column -->
+		<div class="column-left">
+			<div class="column-left-in">
+                                    <%= yield %>
+			</div>
+		</div> <!-- Left column end -->
+
+<hr class="noscreen" />
+
+		<!-- Right column -->
+		<div class="column-right">
+			<div class="column-right-in">
+
+                                <%= render "side" %>
+
+
+				<div class="address">
+				<address>
+					Company name<br />
+					Street 1000/23<br />
+					500033 City name <br />
+					Tel.: 1234567890<br />
+					E-mail: info&#64;<!---->company.com
+				</address>
+				</div>
+
+			</div>
+		</div> <!-- Right column end -->
+		<div class="cleaner">&nbsp;</div>
+	</div> <!-- Content end -->
+
+<hr class="noscreen" />
+
+	<!-- Footer -->
+	<div id="footer">
+		<ul>
+			<li><a href="/" class="active">Home</a>|</li>
+			<li><a href="#">About us</a>|</li>
+			<li><a href="#">Services</a>|</li>
+			<li><a href="#">Testimonials</a>|</li>
+			<li><a href="#">Contact</a>|</li>
+			<li><a href="#top">Top</a>&uarr;</li>
+		</ul>
+
+		<p class="cop">Copyright &copy; 2008 <a href="#">Company name</a>. All Rights Reserved.</p>
+	</div> <!-- Footer end -->
+
+<hr class="noscreen" />
+
+	<p class="mantis-a"><a href="http://www.mantisatemplates.com/">Mantis-a templates</a>, 
+	visit <a id="commercial-link" href="http://www.netmeter.eu" title="Free internet speed test">Netmeter</a> | <a href="http://free-templates.ru/">free templates</a></p>
+
+</div> <!-- Wrapper end -->
+</body>
+</html>

@@ -1,0 +1,4 @@
+=simple_form_for(@hospitalization_type) do |f|
+  =f.error_notification
+  =f.input :name,:title => "Тип госпитализации"
+  = f.submit "Сохранить"

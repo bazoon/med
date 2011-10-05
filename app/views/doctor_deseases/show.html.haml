@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Doctor type:
+  = @doctor_desease.doctor_type_id
+%p
+  %b Desease type:
+  = @doctor_desease.desease_type_id
+
+= link_to 'Edit', edit_doctor_desease_path(@doctor_desease)
+\|
+= link_to 'Back', doctor_deseases_path

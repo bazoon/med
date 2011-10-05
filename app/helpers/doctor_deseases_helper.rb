@@ -1,0 +1,2 @@
+module DoctorDeseasesHelper
+end

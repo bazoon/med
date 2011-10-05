@@ -1,0 +1,21 @@
+%h2 Типы лечебно-диагностической работы
+%br
+
+-unless flash.empty?
+  %p#notice= notice
+
+%table#newspaper-a
+  %tr
+    %th Наименование
+    %th
+    %th
+
+  - @med_diagnostic_test_types.each do |med_diagnostic_test_type|
+    %tr
+      %td= med_diagnostic_test_type.name
+      %td= link_to image_tag("",:class => "ui-icon ui-icon-pencil"),edit_med_diagnostic_test_type_path(med_diagnostic_test_type)
+      %td= link_to image_tag("",:class => "ui-icon ui-icon-minus"),med_diagnostic_test_type, :confirm => 'Are you sure?', :method => :delete if med_diagnostic_test_type.can_be_deleted
+
+%br
+
+= link_to 'Новый', new_med_diagnostic_test_type_path

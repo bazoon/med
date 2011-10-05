@@ -1,0 +1,17 @@
+%h2 Типы анализов
+%br
+
+%table#newspaper-a
+  %tr
+    %th Тип
+    %th
+    %th
+
+  - @lab_test_types.each do |lab_test_type|
+    %tr
+      %td= lab_test_type.name
+      %td= link_to image_tag("",:class => "ui-icon ui-icon-pencil"), edit_lab_test_type_path(lab_test_type)
+      %td= link_to image_tag("",:class => "ui-icon ui-icon-minus"), lab_test_type, :confirm => 'Are you sure?', :method => :delete if lab_test_type.can_be_deleted
+%br
+
+= link_to 'Добавить новый тип анализа', new_lab_test_type_path

@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @desease_type.name
+
+= link_to 'Edit', edit_desease_type_path(@desease_type)
+\|
+= link_to 'Back', desease_types_path
