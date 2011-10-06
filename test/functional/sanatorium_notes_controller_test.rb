@@ -5,47 +5,43 @@ class SanatoriumNotesControllerTest < ActionController::TestCase
 
   setup do
     @sanatorium_note = sanatorium_notes(:one)
+    @client = clients(:one)
   end
 
   test "should get index" do
-    get :index
+    get :index, :client_id => @client
     assert_response :success
     assert_not_nil assigns(:sanatorium_notes)
   end
 
   test "should get new" do
-    get :new
+    get :new, :client_id => @client
     assert_response :success
   end
 
   test "should create sanatorium_note" do
     assert_difference('SanatoriumNote.count') do
-      post :create, sanatorium_note: @sanatorium_note.attributes
+      post :create, sanatorium_note: @sanatorium_note.attributes, :client_id => @client
     end
 
-    assert_redirected_to sanatorium_note_path(assigns(:sanatorium_note))
-  end
-
-  test "should show sanatorium_note" do
-    get :show, id: @sanatorium_note.to_param
-    assert_response :success
+    assert_redirected_to client_sanatorium_notes_path
   end
 
   test "should get edit" do
-    get :edit, id: @sanatorium_note.to_param
+    get :edit, id: @sanatorium_note.to_param, :client_id => @client
     assert_response :success
   end
 
   test "should update sanatorium_note" do
-    put :update, id: @sanatorium_note.to_param, sanatorium_note: @sanatorium_note.attributes
-    assert_redirected_to sanatorium_note_path(assigns(:sanatorium_note))
+    put :update, id: @sanatorium_note.to_param, sanatorium_note: @sanatorium_note.attributes, :client_id => @client
+    assert_redirected_to client_sanatorium_notes_path
   end
 
   test "should destroy sanatorium_note" do
     assert_difference('SanatoriumNote.count', -1) do
-      delete :destroy, id: @sanatorium_note.to_param
+      delete :destroy, id: @sanatorium_note.to_param, :client_id => @client
     end
 
-    assert_redirected_to sanatorium_notes_path
+    assert_redirected_to client_sanatorium_notes_path
   end
 end

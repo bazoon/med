@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
 
 one:
-  actual_date: 2011-09-27
+  actual_date: 01.01.2003
   htm_help_type_id: 1
   note: MyText
   client_id: 1
 
 two:
-  actual_date: 2011-09-27
+  actual_date: 01.01.2003
   htm_help_type_id: 1
   note: MyText
   client_id: 1

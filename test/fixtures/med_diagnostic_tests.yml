@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
 
 one:
-  test_date: 2011-09-28
+  test_date: 01.01.2003
   med_diagnostic_test_type_id: 1
   result: MyText
   client_id: 1
 
 two:
-  test_date: 2011-09-28
+  test_date: 01.02.2003
   med_diagnostic_test_type_id: 1
   result: MyText
   client_id: 1

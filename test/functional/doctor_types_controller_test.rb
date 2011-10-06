@@ -21,7 +21,7 @@ class DoctorTypesControllerTest < ActionController::TestCase
       post :create, doctor_type: @doctor_type.attributes
     end
 
-    assert_redirected_to doctor_type_path(assigns(:doctor_type))
+    assert_redirected_to doctor_types_path
   end
 
   test "should show doctor_type" do
@@ -36,7 +36,7 @@ class DoctorTypesControllerTest < ActionController::TestCase
 
   test "should update doctor_type" do
     put :update, id: @doctor_type.to_param, doctor_type: @doctor_type.attributes
-    assert_redirected_to doctor_type_path(assigns(:doctor_type))
+    assert_redirected_to doctor_types_path
   end
 
   test "should destroy doctor_type" do

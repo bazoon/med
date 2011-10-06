@@ -67,7 +67,7 @@ class HospitalizationsController < ApplicationController
 
     respond_to do |format|
       if @hospitalization.update_attributes(params[:hospitalization])
-        format.html { redirect_to client_hospitalizations_path(@client), I18n.t(:record_updated) }
+        format.html { redirect_to client_hospitalizations_path(@client), notice: I18n.t(:record_updated) }
         format.json { head :ok }
       else
         format.html { render action: "edit" }

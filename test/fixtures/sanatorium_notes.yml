@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
 
 one:
-  actual_date: 2011-09-27
+  actual_date: 01.02.2003
   client_id: 1
   neediness_reference: MyText
   sanatorium_card: MyText
 
 two:
-  actual_date: 2011-09-27
+  actual_date: 01.02.2003
   client_id: 1
   neediness_reference: MyText
   sanatorium_card: MyText

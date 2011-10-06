@@ -36,7 +36,7 @@ class DeseaseTypesControllerTest < ActionController::TestCase
 
   test "should update desease_type" do
     put :update, id: @desease_type.to_param, desease_type: @desease_type.attributes
-    assert_redirected_to desease_types
+    assert_redirected_to desease_types_path
   end
 
   test "should destroy desease_type" do
